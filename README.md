@@ -28,5 +28,6 @@ JinnLockViewController *lockViewController = [[JinnLockViewController alloc] ini
 ```
 * JinnLockConfig
 You may custom the theme in the configuration file.
+
 # Blog
 http://blog.csdn.net/jinnchang
