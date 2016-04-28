@@ -26,10 +26,8 @@ JinnLockViewController *lockViewController = [[JinnLockViewController alloc] ini
 + (NSString *)oldPassword;
 + (void)removePassword;
 ```
-* JinnLockConfig
+* JinnLockConfig（You may custom the theme in the configuration file.）
 ```objc
-You may custom the theme in the configuration file.
-
 // 指示器大小
 #define JINN_LOCK_INDICATOR_SIDE_LENGTH 30.0f
 
