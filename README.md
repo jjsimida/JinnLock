@@ -27,7 +27,8 @@ JinnLockViewController *lockViewController = [[JinnLockViewController alloc] ini
 + (void)removePassword;
 ```
 * JinnLockConfig
+```objc
 You may custom the theme in the configuration file.
-
+```
 # Blog
 http://blog.csdn.net/jinnchang
