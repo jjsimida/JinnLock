@@ -44,6 +44,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>JinnLock</string>
+	<string>Lock</string>
 </dict>
 </plist>
