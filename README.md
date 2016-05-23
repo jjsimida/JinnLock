@@ -81,5 +81,5 @@ JinnLockViewController *lockViewController = [[JinnLockViewController alloc] ini
 #define JINN_LOCK_RE_OLD_TEXT    @"请重新输入旧密码"
 #define JINN_LOCK_NOT_ENOUGH     [NSString stringWithFormat:@"最少连接%d个点，请重新输入", JINN_LOCK_CONNECTION_MIN_NUM]
 ```
-# Blog
-http://blog.csdn.net/jinnchang
+# Github
+https://github.com/jinnchang
