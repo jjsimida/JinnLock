@@ -1,97 +1,23 @@
-# JinnLock
-A gesture unlock view controller for iOS by jinnchang.
-# Preview
-![image](https://github.com/jinnchang/JinnLock/blob/master/Preview/preview.gif)
-# Usage
-```objective-c
-#import "JinnLockViewController.h"
-```
-* JinnLockViewController
-```objc
-JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithDelegate:nil type:JinnLockTypeVerify appearMode:JinnLockAppearModePresent];
-[self.navigationController.visibleViewController presentViewController:lockViewController animated:NO completion:nil];
-```
-* JinnLockViewControllerDelegate
-```objc
-/**
- *  密码创建成功
- *
- *  @param passcode
- */
-- (void)passcodeDidCreate:(NSString *)passcode;
+/***************************************************************************************************
+ **  Copyright © 2016年 Jinn Chang. All rights reserved.
+ **  Giuhub: https://github.com/jinnchang
+ **
+ **  FileName: JinnLockConfig.h
+ **  Description: 配置文件
+ **
+ **  History
+ **  -----------------------------------------------------------------------------------------------
+ **  Author: jinnchang
+ **  Date: 16/4/28
+ **  Version: 1.0.0
+ **  Remark: Create
+ **************************************************************************************************/
 
-/**
- *  密码修改成功
- *
- *  @param passcode
- */
-- (void)passcodeDidModify:(NSString *)passcode;
+#import <UIKit/UIKit.h>
 
-/**
- *  密码验证成功
- *
- *  @param passcode
- */
-- (void)passcodeDidVerify:(NSString *)passcode;
+#ifndef JinnLockConfig_h
+#define JinnLockConfig_h
 
-/**
- *  密码移除成功
- */
-- (void)passcodeDidRemove;
-```
-* JinnLockTool
-```objc
-/**
- *  是否允许手势解锁(应用级别的)
- *
- *  @return
- */
-+ (BOOL)isGestureUnlockEnabled;
-
-/**
- *  设置是否允许手势解锁功能
- *
- *  @param enabled
- */
-+ (void)setGestureUnlockEnabled:(BOOL)enabled;
-
-/**
- *  当前已经设置的手势密码
- *
- *  @return
- */
-+ (NSString *)currentGesturePasscode;
-
-/**
- *  设置新的手势密码
- *
- *  @param passcode
- */
-+ (void)setGesturePasscode:(NSString *)passcode;
-
-/**
- *  是否支持指纹识别(系统级别的)
- *
- *  @return
- */
-+ (BOOL)isTouchIdSupported;
-
-/**
- *  是否允许指纹解锁(应用级别的)
- *
- *  @return
- */
-+ (BOOL)isTouchIdUnlockEnabled;
-
-/**
- *  设置是否允许指纹解锁功能
- *
- *  @param enabled
- */
-+ (void)setTouchIdUnlockEnabled:(BOOL)enabled;
-```
-* JinnLockConfig（You may custom the theme in the configuration file.）
-```objc
 // 背景颜色
 #define JINN_LOCK_COLOR_BACKGROUND [UIColor whiteColor]
 
@@ -179,6 +105,5 @@ static NSString * const kJinnLockOldErrorText = @"密码不正确";
 static NSString * const kJinnLockReOldText    = @"请重新输入旧密码";
 
 #define JINN_LOCK_NOT_ENOUGH [NSString stringWithFormat:@"最少连接%ld个点，请重新输入", (long)kConnectionMinNum]
-```
-# Github
-https://github.com/jinnchang
+
+#endif
