@@ -28,7 +28,7 @@
 #define JINN_LOCK_COLOR_ERROR [UIColor redColor]
 
 // 重设按钮颜色
-#define JINN_LOCK_COLOR_RESET [UIColor grayColor]
+#define JINN_LOCK_COLOR_BUTTON [UIColor grayColor]
 
 /**
  *  指示器大小
@@ -93,6 +93,7 @@ static NSString * const kJinnLockPasscode = @"JinnLockPasscode";
 /**
  *  提示文本
  */
+static NSString * const kJinnLockTouchIdText  = @"指纹验证";
 static NSString * const kJinnLockResetText    = @"重新设置";
 static NSString * const kJinnLockNewText      = @"请设置新密码";
 static NSString * const kJinnLockVerifyText   = @"请输入密码";

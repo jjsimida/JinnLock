@@ -51,6 +51,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
 @property (nonatomic, strong) JinnLockSudoko     *sudoko;
 @property (nonatomic, strong) UILabel            *noticeLabel;
 @property (nonatomic, strong) UIButton           *resetButton;
+@property (nonatomic, strong) UIButton           *touchIdButton;
 
 @property (nonatomic, assign) JinnLockStep       step;
 @property (nonatomic, strong) NSString           *passcodeTemp;
@@ -87,14 +88,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             
             if ([JinnLockTool isTouchIdUnlockEnabled] && [JinnLockTool isTouchIdSupported])
             {
-                [self.context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                             localizedReason:@"输入指纹解锁密码"
-                                       reply:^(BOOL success, NSError * _Nullable error) {
-                                           if (success)
-                                           {
-                                               [self hide];
-                                           }
-                                       }];
+                [self showTouchIdView];
             }
         }
             break;
@@ -164,9 +158,9 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     
     UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [resetButton setTitle:kJinnLockResetText forState:UIControlStateNormal];
-    [resetButton setTitleColor:JINN_LOCK_COLOR_RESET forState:UIControlStateNormal];
-    [resetButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
-    [resetButton addTarget:self action:@selector(resetButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [resetButton setTitleColor:JINN_LOCK_COLOR_BUTTON forState:UIControlStateNormal];
+    [resetButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [resetButton addTarget:self action:@selector(resetButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:resetButton];
     [self setResetButton:resetButton];
     [resetButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -174,9 +168,34 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
         make.top.equalTo(sudoko.mas_bottom).offset(20);
         make.height.mas_equalTo(20);
     }];
+    
+    UIButton *touchIdButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [touchIdButton setTitle:kJinnLockTouchIdText forState:UIControlStateNormal];
+    [touchIdButton setTitleColor:JINN_LOCK_COLOR_BUTTON forState:UIControlStateNormal];
+    [touchIdButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+    [touchIdButton addTarget:self action:@selector(touchIdButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:touchIdButton];
+    [self setTouchIdButton:touchIdButton];
+    [touchIdButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(sudoko.mas_bottom).offset(20);
+        make.height.mas_equalTo(20);
+    }];
 }
 
 #pragma mark - Private
+
+- (void)showTouchIdView
+{
+    [self.context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                 localizedReason:@"通过验证指纹解锁"
+                           reply:^(BOOL success, NSError * _Nullable error) {
+                               if (success)
+                               {
+                                   [self hide];
+                               }
+                           }];
+}
 
 - (void)updateGuiForStep:(JinnLockStep)step
 {
@@ -190,6 +209,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepCreateAgain:
@@ -198,6 +218,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = NO;
             self.resetButton.hidden = NO;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepCreateNotMatch:
@@ -206,6 +227,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_ERROR;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepCreateReNew:
@@ -214,6 +236,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyOld:
@@ -222,6 +245,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyOldError:
@@ -230,6 +254,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_ERROR;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyReOld:
@@ -238,6 +263,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyNew:
@@ -246,6 +272,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyAgain:
@@ -254,6 +281,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = NO;
             self.resetButton.hidden = NO;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyNotMatch:
@@ -262,6 +290,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_ERROR;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepModifyReNew:
@@ -270,6 +299,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepVerifyOld:
@@ -278,6 +308,15 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            
+            if ([JinnLockTool isTouchIdUnlockEnabled] && [JinnLockTool isTouchIdSupported])
+            {
+                self.touchIdButton.hidden = NO;
+            }
+            else
+            {
+                self.touchIdButton.hidden = YES;
+            }
         }
             break;
         case JinnLockStepVerifyOldError:
@@ -286,6 +325,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_ERROR;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepVerifyReOld:
@@ -294,6 +334,15 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            
+            if ([JinnLockTool isTouchIdUnlockEnabled] && [JinnLockTool isTouchIdSupported])
+            {
+                self.touchIdButton.hidden = NO;
+            }
+            else
+            {
+                self.touchIdButton.hidden = YES;
+            }
         }
             break;
         case JinnLockStepRemoveOld:
@@ -302,6 +351,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepRemoveOldError:
@@ -310,6 +360,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_ERROR;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
             break;
         case JinnLockStepRemoveReOld:
@@ -318,6 +369,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
             self.noticeLabel.textColor = JINN_LOCK_COLOR_NORMAL;
             self.indicator.hidden = YES;
             self.resetButton.hidden = YES;
+            self.touchIdButton.hidden = YES;
         }
         default:
             break;
@@ -362,7 +414,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     }
 }
 
-- (void)resetButtonClick
+- (void)resetButtonClicked
 {
     if (self.type == JinnLockTypeCreate)
     {
@@ -372,6 +424,11 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     {
         [self updateGuiForStep:JinnLockStepModifyNew];
     }
+}
+
+- (void)touchIdButtonClicked
+{
+    [self showTouchIdView];
 }
 
 #pragma mark - JinnLockSudokoDelegate
