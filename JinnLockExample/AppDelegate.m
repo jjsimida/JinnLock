@@ -42,7 +42,11 @@
         JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithDelegate:nil
                                                                                                  type:JinnLockTypeVerify
                                                                                            appearMode:JinnLockAppearModePresent];
-        [self.navigationController.visibleViewController presentViewController:lockViewController animated:NO completion:nil];
+        
+        if (![self.navigationController.visibleViewController isKindOfClass:[JinnLockViewController class]])
+        {
+            [self.navigationController.visibleViewController presentViewController:lockViewController animated:NO completion:nil];
+        }
     }
 }
 
