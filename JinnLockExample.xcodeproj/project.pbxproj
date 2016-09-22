@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF835BF5E4A40106ABD8A1EA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E6F973F2AF66237AA08F8C /* libPods.a */; };
+		FAD441361D93B40E0005AF72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD441351D93B40E0005AF72 /* main.m */; };
+		FAD441391D93B40E0005AF72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD441381D93B40E0005AF72 /* AppDelegate.m */; };
+		FAD4413C1D93B40E0005AF72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4413B1D93B40E0005AF72 /* ViewController.m */; };
+		FAD441411D93B40E0005AF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD441401D93B40E0005AF72 /* Assets.xcassets */; };
+		FAD4414D1D93B7600005AF72 /* LockSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4414C1D93B7600005AF72 /* LockSettingViewController.m */; };
+		FAD4414F1D93B78F0005AF72 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD4414E1D93B78F0005AF72 /* icon.png */; };
+		FAD441531D93B8EE0005AF72 /* JinnLockCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD441521D93B8EE0005AF72 /* JinnLockCircle.m */; };
+		FAD441561D93B9390005AF72 /* JinnLockIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD441551D93B9390005AF72 /* JinnLockIndicator.m */; };
+		FAD441591D93B9450005AF72 /* JinnLockSudoko.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD441581D93B9450005AF72 /* JinnLockSudoko.m */; };
+		FAD4415C1D93B9520005AF72 /* JinnLockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4415B1D93B9520005AF72 /* JinnLockTool.m */; };
+		FAD4415F1D93B95E0005AF72 /* JinnLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4415E1D93B95E0005AF72 /* JinnLockViewController.m */; };
+		FAD441611D93B9750005AF72 /* JinnLockConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = FAD441601D93B9750005AF72 /* JinnLockConfig.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EB44258C43B3255D0F2F411 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9932F2119336BF58001BBC9C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E4E6F973F2AF66237AA08F8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD441311D93B40E0005AF72 /* JinnLockExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JinnLockExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD441351D93B40E0005AF72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAD441371D93B40E0005AF72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAD441381D93B40E0005AF72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAD4413A1D93B40E0005AF72 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAD4413B1D93B40E0005AF72 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAD441401D93B40E0005AF72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAD441451D93B40E0005AF72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD4414B1D93B7600005AF72 /* LockSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockSettingViewController.h; sourceTree = "<group>"; };
+		FAD4414C1D93B7600005AF72 /* LockSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockSettingViewController.m; sourceTree = "<group>"; };
+		FAD4414E1D93B78F0005AF72 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		FAD441511D93B8EE0005AF72 /* JinnLockCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockCircle.h; sourceTree = "<group>"; };
+		FAD441521D93B8EE0005AF72 /* JinnLockCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnLockCircle.m; sourceTree = "<group>"; };
+		FAD441541D93B9390005AF72 /* JinnLockIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockIndicator.h; sourceTree = "<group>"; };
+		FAD441551D93B9390005AF72 /* JinnLockIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnLockIndicator.m; sourceTree = "<group>"; };
+		FAD441571D93B9450005AF72 /* JinnLockSudoko.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockSudoko.h; sourceTree = "<group>"; };
+		FAD441581D93B9450005AF72 /* JinnLockSudoko.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnLockSudoko.m; sourceTree = "<group>"; };
+		FAD4415A1D93B9520005AF72 /* JinnLockTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockTool.h; sourceTree = "<group>"; };
+		FAD4415B1D93B9520005AF72 /* JinnLockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnLockTool.m; sourceTree = "<group>"; };
+		FAD4415D1D93B95E0005AF72 /* JinnLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockViewController.h; sourceTree = "<group>"; };
+		FAD4415E1D93B95E0005AF72 /* JinnLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnLockViewController.m; sourceTree = "<group>"; };
+		FAD441601D93B9750005AF72 /* JinnLockConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnLockConfig.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAD4412E1D93B40E0005AF72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF835BF5E4A40106ABD8A1EA /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C5ACA6C92559240F7FEF2B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EB44258C43B3255D0F2F411 /* Pods.debug.xcconfig */,
+				9932F2119336BF58001BBC9C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81D3E3D6AFDAEA68CD250C1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4E6F973F2AF66237AA08F8C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD441281D93B40E0005AF72 = {
+			isa = PBXGroup;
+			children = (
+				FAD441501D93B8DE0005AF72 /* JinnLock */,
+				FAD441331D93B40E0005AF72 /* JinnLockExample */,
+				FAD441321D93B40E0005AF72 /* Products */,
+				5C5ACA6C92559240F7FEF2B5 /* Pods */,
+				81D3E3D6AFDAEA68CD250C1E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FAD441321D93B40E0005AF72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAD441311D93B40E0005AF72 /* JinnLockExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAD441331D93B40E0005AF72 /* JinnLockExample */ = {
+			isa = PBXGroup;
+			children = (
+				FAD441371D93B40E0005AF72 /* AppDelegate.h */,
+				FAD441381D93B40E0005AF72 /* AppDelegate.m */,
+				FAD4413A1D93B40E0005AF72 /* ViewController.h */,
+				FAD4413B1D93B40E0005AF72 /* ViewController.m */,
+				FAD4414B1D93B7600005AF72 /* LockSettingViewController.h */,
+				FAD4414C1D93B7600005AF72 /* LockSettingViewController.m */,
+				FAD441341D93B40E0005AF72 /* Supporting Files */,
+			);
+			path = JinnLockExample;
+			sourceTree = "<group>";
+		};
+		FAD441341D93B40E0005AF72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4414E1D93B78F0005AF72 /* icon.png */,
+				FAD441401D93B40E0005AF72 /* Assets.xcassets */,
+				FAD441451D93B40E0005AF72 /* Info.plist */,
+				FAD441351D93B40E0005AF72 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD441501D93B8DE0005AF72 /* JinnLock */ = {
+			isa = PBXGroup;
+			children = (
+				FAD441511D93B8EE0005AF72 /* JinnLockCircle.h */,
+				FAD441521D93B8EE0005AF72 /* JinnLockCircle.m */,
+				FAD441541D93B9390005AF72 /* JinnLockIndicator.h */,
+				FAD441551D93B9390005AF72 /* JinnLockIndicator.m */,
+				FAD441571D93B9450005AF72 /* JinnLockSudoko.h */,
+				FAD441581D93B9450005AF72 /* JinnLockSudoko.m */,
+				FAD4415A1D93B9520005AF72 /* JinnLockTool.h */,
+				FAD4415B1D93B9520005AF72 /* JinnLockTool.m */,
+				FAD4415D1D93B95E0005AF72 /* JinnLockViewController.h */,
+				FAD4415E1D93B95E0005AF72 /* JinnLockViewController.m */,
+				FAD441601D93B9750005AF72 /* JinnLockConfig.h */,
+			);
+			path = JinnLock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAD441301D93B40E0005AF72 /* JinnLockExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD441481D93B40E0005AF72 /* Build configuration list for PBXNativeTarget "JinnLockExample" */;
+			buildPhases = (
+				70604062A2D5C4EDB60D2374 /* Check Pods Manifest.lock */,
+				FAD4412D1D93B40E0005AF72 /* Sources */,
+				FAD4412E1D93B40E0005AF72 /* Frameworks */,
+				FAD4412F1D93B40E0005AF72 /* Resources */,
+				0BBA8103A277DB1DD85AEB89 /* Embed Pods Frameworks */,
+				44529955261007F2B8AA5713 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JinnLockExample;
+			productName = JinnLockExample;
+			productReference = FAD441311D93B40E0005AF72 /* JinnLockExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAD441291D93B40E0005AF72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Jinn Chang";
+				TargetAttributes = {
+					FAD441301D93B40E0005AF72 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F58U28AD8G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FAD4412C1D93B40E0005AF72 /* Build configuration list for PBXProject "JinnLockExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAD441281D93B40E0005AF72;
+			productRefGroup = FAD441321D93B40E0005AF72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAD441301D93B40E0005AF72 /* JinnLockExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAD4412F1D93B40E0005AF72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD4414F1D93B78F0005AF72 /* icon.png in Resources */,
+				FAD441411D93B40E0005AF72 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BBA8103A277DB1DD85AEB89 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44529955261007F2B8AA5713 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70604062A2D5C4EDB60D2374 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAD4412D1D93B40E0005AF72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD4414D1D93B7600005AF72 /* LockSettingViewController.m in Sources */,
+				FAD441611D93B9750005AF72 /* JinnLockConfig.h in Sources */,
+				FAD4415F1D93B95E0005AF72 /* JinnLockViewController.m in Sources */,
+				FAD441561D93B9390005AF72 /* JinnLockIndicator.m in Sources */,
+				FAD441591D93B9450005AF72 /* JinnLockSudoko.m in Sources */,
+				FAD4413C1D93B40E0005AF72 /* ViewController.m in Sources */,
+				FAD441391D93B40E0005AF72 /* AppDelegate.m in Sources */,
+				FAD441531D93B8EE0005AF72 /* JinnLockCircle.m in Sources */,
+				FAD441361D93B40E0005AF72 /* main.m in Sources */,
+				FAD4415C1D93B9520005AF72 /* JinnLockTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FAD441461D93B40E0005AF72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAD441471D93B40E0005AF72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAD441491D93B40E0005AF72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB44258C43B3255D0F2F411 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F58U28AD8G;
+				INFOPLIST_FILE = JinnLockExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jinnchang.ios-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAD4414A1D93B40E0005AF72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9932F2119336BF58001BBC9C /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F58U28AD8G;
+				INFOPLIST_FILE = JinnLockExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jinnchang.ios-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAD4412C1D93B40E0005AF72 /* Build configuration list for PBXProject "JinnLockExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD441461D93B40E0005AF72 /* Debug */,
+				FAD441471D93B40E0005AF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD441481D93B40E0005AF72 /* Build configuration list for PBXNativeTarget "JinnLockExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD441491D93B40E0005AF72 /* Debug */,
+				FAD4414A1D93B40E0005AF72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAD441291D93B40E0005AF72 /* Project object */;
+}
